@@ -1,0 +1,46 @@
+.ch-card {
+  min-width: 247px;
+}
+.tall-ch-card {
+  height: 22rem;
+}
+.short-ch-card {
+  height: 18rem;
+}
+.shortest-ch-card {
+  height: 13rem;
+}
+.chart-label--container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+.chart-label--name {
+  color: var(--c-primary-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+  margin-left: 1.625rem;
+  font-size: 0.8125rem;
+}
+.chart-label--description {
+  letter-spacing: 0.01rem;
+  font-size: 0.8125rem;
+  margin-left: 1.625rem;
+}
+
+@media (max-width: 43em) {
+  .ch-card {
+    padding: 0.875rem 0.625rem;
+  }
+}
+@media (min-width: 43em) {
+  .chart-label--container {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .chart-label--description {
+    margin-right: 0.75rem;
+  }
+}

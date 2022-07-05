@@ -1,0 +1,90 @@
+.btn,
+.cancel-btn {
+  background-color: var(--c-primary);
+  color: white;
+  padding: 0.6875rem 2.25rem;
+  text-align: center;
+  margin: 1rem 1rem 0;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px var(--c-grey-3);
+  border-top: solid 2px var(--c-primary);
+  border-bottom: solid 2px var(--c-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover,
+.cancel-btn:hover {
+  background-color: var(--c-primary-dark);
+  box-shadow: 0px 2px 4px var(--c-grey-3);
+  border-top: solid 2px var(--c-primary-dark);
+  border-bottom: solid 2px var(--c-accent-light);
+}
+.btn:active,
+.cancel-btn:active {
+  background-color: var(--c-primary-dark);
+  box-shadow: 0px 0px 0px var(--c-grey-3);
+  border-top: solid 2px var(--c-primary-dark);
+  border-bottom: solid 2px var(--c-primary-light);
+}
+/* cancel btn */
+.cancel-btn {
+  background-color: var(--c-primary-light);
+  border-color: var(--c-primary-light);
+}
+/* text btn */
+.text-btn {
+  background-color: var(--c-grey-1);
+  color: var(--c-primary);
+  padding: 0.25rem 0.625rem;
+  margin: 0.25rem;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.text-btn:hover {
+  background-color: var(--c-primary-lightest);
+  color: var(--c-primary-dark);
+  box-shadow: 0px 1px 2px var(--c-grey-2);
+}
+.text-btn:active {
+  background-color: var(--c-accent-lightest);
+  box-shadow: none;
+}
+/* dark btn */
+.dark-btn {
+  background-color: var(--c-grey-4);
+  color: var(--c-grey-3);
+  padding: 0.25rem 0.625rem;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  font-weight: 700;
+  border: solid 1px var(--c-grey-side-3);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.dark-btn:hover,
+.dark-btn:active {
+  background-color: var(--c-accent);
+  color: var(--c-grey-1);
+  border-color: var(--c-accent);
+}
+
+@media (min-width: 43em) {
+  .btn,
+  .cancel-btn {
+    padding: 0.75rem 2.75rem;
+    font-size: 0.75rem;
+  }
+}

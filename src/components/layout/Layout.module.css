@@ -1,0 +1,120 @@
+.background {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+.background--top {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--c-grey-side-2);
+}
+.background--top-center {
+  max-width: 80rem;
+  height: 4.75rem;
+  margin: auto;
+  background-color: var(--c-grey-side-2);
+}
+.background--center {
+  max-width: 80rem;
+  min-height: 100vh;
+  margin: auto;
+  background-color: var(--c-grey-2);
+}
+.container {
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+}
+.container--nav {
+  flex-shrink: 0;
+  overflow-x: hidden;
+  border-right: solid 1px var(--c-grey-1);
+}
+.container--main {
+  flex-grow: 1;
+  overflow-x: scroll;
+  color: var(--c-grey-5);
+}
+.landing-page--container {
+  max-width: 80rem;
+  margin: auto;
+  overflow-x: hidden;
+  color: var(--c-grey-5);
+}
+.container--nav, 
+.container--main,
+.landing-page--container {
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* hide scrollbar on IE and Edge */
+  scrollbar-width: none;  /* hide scrollbar on Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container--nav::-webkit-scrollbar, 
+.container--main::-webkit-scrollbar,
+.landing-page--container::-webkit-scrollbar {
+  display: none;
+}
+.container--arrows-div {
+  position: fixed;
+  bottom: 4rem;
+  padding: 1rem 3px 1rem 2px;
+  background-color: var(--c-grey-4);
+  color: var(--c-grey-2);
+  box-shadow: 1px 1px 2px var(--c-grey-3);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 6px 6px 0px;
+  z-index: 2;
+  transition: all 0.2s;
+}
+.container--arrows-div:hover {
+  background-color: var(--c-accent);
+  color: white;
+  cursor: pointer;
+}
+.scroll-to-bottom-fix {
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 43em) {
+  .container--arrows-div {
+    padding: 1rem 0.25rem 1rem 0.25rem;
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 60em) {
+  .background--top {
+    height: 4rem;
+  }
+  .container--arrows-div {
+    padding: 1rem 0.15rem 1rem 0.15rem;
+    border-radius: 0px 8px 8px 0px;
+  }
+}
+@media (min-width: 75em) {
+  .background--top {
+    height: 4.75rem;
+  }
+  .container--arrows-div {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 80.1em) {
+  .background--top-center {
+    border-right: solid 1px var(--c-grey-side-1);
+  }
+  .background--center {
+    border-right: solid 1px var(--c-grey-1);
+    border-left: solid 1px var(--c-grey-1);
+  }
+  .container--nav {
+    border-left: solid 1px var(--c-grey-1);
+  }
+  .landing-page--background--top {
+    background-color: #78d;
+  }
+}

@@ -1,0 +1,34 @@
+.reading-form {
+  max-width: 23rem;
+}
+.reading-input--component {
+  margin: 0.75rem 0;
+}
+.reading-input--component .reading-input--bold {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.reading-input--component .reading-input--input {
+  width: 6rem;
+}
+.reading-textarea {
+  flex-direction: column;
+}
+.reading-textarea--label {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.reading-textarea .reading-textarea--textarea {
+  width: auto;
+}
+.reading-input--component .reading-input--toggle:hover {
+  box-shadow: 0px 2px 4px var(--c-grey-2);
+  cursor: pointer;
+}
+.reading-input--component .reading-input--toggle:active {
+  border: dotted 1px var(--c-primary-light);
+  box-shadow: 0px 1px 2px var(--c-grey-2);
+}

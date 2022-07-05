@@ -1,0 +1,30 @@
+.hyper-ind--ico {
+  position: relative;
+  top: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.hypert-ind--bar {
+  height: 3px;
+  display: flex;
+  gap: 0.25rem;
+}
+.hypert-ind--bar div {
+  flex: 1;
+}
+
+
+@media (min-width: 43em) {
+  .hyper-indicator {
+    padding: 0 0.75rem;
+  }
+}
+@media (min-width: 60em) {
+  .hyper-indicator {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 75em) {
+  .hyper-indicator {
+    padding: 0 5rem;
+  }
+}

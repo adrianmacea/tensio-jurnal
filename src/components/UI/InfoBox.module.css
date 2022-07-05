@@ -1,0 +1,10 @@
+.info-box--card {
+  position: absolute;
+  background-color: var(--c-light);
+  box-shadow: 1px 1px 2px var(--c-grey-side-3);
+  padding: 0.25rem;
+  z-index: 1;
+  top: -2.5rem;
+  left: -2.5rem;
+  border-radius: 2px;
+}

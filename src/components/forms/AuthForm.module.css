@@ -1,0 +1,20 @@
+.auth-input--component {
+  flex-direction: column;
+}
+.auth-input--label {
+  margin-bottom: 0.5rem;
+}
+.auth-input--component .auth-input--input {
+  flex: 4;
+  padding: 0.5rem;
+}
+
+@media (min-width: 33em) {
+  .auth-input--component {
+    flex-direction: row;
+    align-items: center;
+  }
+  .auth-input--label {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,19 @@
+.history-list {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 33em) {
+  .history-list {
+    margin: 0 2.25rem;
+  }
+}
+@media (min-width: 43em) {
+  .history-list {
+    margin: 0 8rem;
+  }
+}
+@media (min-width: 60em) {
+  .history-list {
+    margin: 0 12rem;
+  }
+}

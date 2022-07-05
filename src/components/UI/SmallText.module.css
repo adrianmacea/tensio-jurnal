@@ -1,0 +1,13 @@
+.text-small {
+  font-size: 0.875rem;
+  color: var(--c-grey-3);
+}
+.text-small-link {
+  font-size: 0.875rem;
+  color: var(--c-primary-dark);
+}
+.text-small-link:hover {
+  color: var(--c-accent-light);
+  text-decoration: underline;
+  cursor: pointer;
+}

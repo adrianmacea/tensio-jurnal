@@ -1,0 +1,69 @@
+.min-max--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.1875rem;
+  font-size: 0.875rem;
+}
+.min-max--number-cnt {
+  min-width: 2.25rem;
+}
+.min-max--number {
+  letter-spacing: 0.04rem;
+}
+.min-max--label {
+  white-space: nowrap;
+  padding: 0 1rem;
+  letter-spacing: 0.02rem;
+}
+.min-max--arrow-cnt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.min-max--arrow-bar {
+  display: inline-block;
+  border-bottom: dotted 2px var(--c-grey-side-2);
+  width: 100%;
+  min-width: 1rem;
+}
+.min-max--arrow-head {
+  border: solid var(--c-grey-side-2);
+  border-width: 0 2px 2px 0;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.min-max--arrow-left {
+  transform: translateX(0.375rem) rotate(135deg);
+}
+.min-max--arrow-right {
+  transform: translateX(-0.375rem) rotate(-45deg);
+}
+.min-max--x-axis {
+  border-bottom: solid 2px var(--c-grey-side-1);
+  margin: 0.75rem 0.4375rem 0.25rem;
+}
+.min-max--x-axis-left {
+  font-size: 0.875rem;
+  float: left;
+  margin-left: 0.5rem;
+}
+.min-max--x-axis-right {
+  font-size: 0.875rem;
+  float: right;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 22em) {
+  .min-max--number-cnt {
+    min-width: 2.75rem;
+  }
+}
+@media (min-width: 43em) {
+  .min-max--number-cnt {
+    min-width: 3.75rem;
+  }
+  .min-max--container {
+    margin-top: 1rem;
+  }
+}

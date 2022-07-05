@@ -1,0 +1,30 @@
+.profile--section, 
+.profile--btn-cluster {
+  width: fit-content;
+  margin: auto;
+  margin-top: 0.75rem;
+}
+.profile--btn-cluster {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profile--text-ico-div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profile--text {
+  /* word-wrap: break-word; */
+  word-break: break-word;
+  margin: 0.5rem 0;
+}
+.profile--ico {
+  color: var(--c-primary-light);
+}
+.profile--btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

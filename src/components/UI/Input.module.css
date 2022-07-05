@@ -1,0 +1,70 @@
+.input-component {
+  margin: 0.75rem 0;
+  display: flex;
+  text-align: left;
+}
+.input-component--label-box {
+  margin-right: 0.5rem;
+  flex: 0.65;
+}
+.input-component--label-box label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+}
+.input-component--label-box p {
+  font-size: 0.75rem;
+  color: var(--c-grey-3);
+  letter-spacing: 0.02rem;
+}
+.input-component input,
+.input-component textarea {
+  padding: 0 0.25rem;
+  min-height: 2.3rem;
+  flex: 1.2;
+  font-size: 0.875rem;
+  letter-spacing: 0.04rem;
+  background-color: var(--c-grey-1);
+  border: dotted 1px var(--c-grey-3);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.input-component input {
+  text-align: center;
+}
+.input-component input:hover,
+.input-component input:focus,
+.input-component textarea:hover,
+.input-component textarea:focus {
+  background-color: var(--c-primary-lightest);
+  border-color: var(--c-primary-dark);
+}
+.input-component.invalid input,
+.input-component.invalid input:focus {
+  background-color: var(--c-accent-lightest);
+  border-color: var(--c-accent-light);
+}
+
+@media (max-width: 22em) {
+  .input-component--label-box {
+    flex: 0.45;
+  }
+}
+@media (min-width: 43em) {
+  .input-component input,
+  .input-component textarea {
+    width: 6rem;
+    padding: 0.5rem;
+    flex: 1.4;
+  }
+}
+@media (min-width: 60em) {
+  .input-component {
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 75em) {
+  .input-component {
+    margin: 1.25rem 0;
+  }
+}

@@ -1,0 +1,93 @@
+.cal-item--card {
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  flex-grow: 0;
+  width: fit-content;
+}
+.cal-item--title {
+  position: relative;
+}
+.cal-item--title-name {
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0 0.75rem;
+  background-color: var(--c-grey-1);
+  font-size: 0.75rem;
+}
+.cal-item--title-line {
+  margin: 0.5rem 0 1rem;
+  border-bottom: dotted 1px var(--c-grey-3);
+}
+.cal-item--grid {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(7, auto);
+  gap: 0.25rem;
+}
+.cal-item--day-name {
+  margin-bottom: 0.25rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+.cal-item--date {
+  position: relative;
+}
+.cal-item--small-circle {
+  width: 0.6875rem;
+  height: 0.6875rem;
+  position: absolute;
+  border-radius: 50%;
+}
+.cal-item--date-circle {
+  min-width: 1.9375rem;
+  height: 1.9375rem;
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 0.125rem;
+  border: dotted 1px var(--c-grey-2);
+  border-radius: 50%;
+  font-size: 0.875rem;
+}
+.cal-item--date-grey {
+  border: none;
+  font-weight: 400;
+  color: var(--c-grey-side-1);
+}
+
+@media (max-width: 22em){
+  .cal-item--card {
+    max-width: 16rem;
+    padding: 1rem 0.75rem;
+  }
+  .cal-item--small-circle {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  .cal-item--date-circle {
+    min-width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+@media (min-width: 43em) {
+  .cal-item--date {
+    margin: 0.0625rem;
+  }
+  .cal-item--small-circle {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  .cal-item--date-circle {
+    min-width: 2.15rem;
+    height: 2.15rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 60em) {
+  .cal-item--date {
+    margin: 0.125rem;
+  }
+}

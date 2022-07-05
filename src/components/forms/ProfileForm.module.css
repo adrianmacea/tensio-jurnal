@@ -1,0 +1,18 @@
+.profile-input--component {
+  flex-direction: column;
+  align-items: center;
+}
+.profile-input--label {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--c-grey-3);
+}
+.profile-input--component .profile-input--input {
+  width: 100%;
+}
+
+@media (min-width: 43em) {
+  .profile-input--component .profile-input--input {
+    width: 80%;
+  }
+}

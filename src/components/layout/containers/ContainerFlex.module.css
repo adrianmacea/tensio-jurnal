@@ -1,0 +1,43 @@
+.container-flex-column,
+.container-flex-row {
+  display: flex;
+  gap: 1.125rem;
+  padding: 1.125rem 0.75rem;
+}
+.container-flex-column {
+  flex-direction: column;
+  align-items: center;
+}
+.container-flex-row {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 33em) {
+  .container-flex-column,
+  .container-flex-row {
+    gap: 1.25rem;
+    padding: 1.25rem 1rem;
+  }
+}
+@media (min-width: 43em) {
+  .container-flex-column,
+  .container-flex-row {
+    gap: 1.375rem;
+    padding: 1.375rem 1.25rem;
+  }
+}
+@media (min-width: 60em) {
+  .container-flex-column,
+  .container-flex-row {
+    gap: 1.625rem;
+    padding: 1.625rem 1.5rem;
+  }
+}
+@media (min-width: 75em) {
+  .container-flex-column,
+  .container-flex-row {
+    gap: 1.875rem;
+    padding: 2.25rem 2.5rem;
+  }
+}

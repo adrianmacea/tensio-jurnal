@@ -1,0 +1,40 @@
+.border {
+  border-bottom: dotted 1px var(--c-grey-3);
+}
+.spacing-high {
+  margin: 1rem 0rem;
+}
+.spacing-low {
+  margin: 0.875rem 0rem;
+}
+
+@media (min-width: 43em) {
+  .spacing-high {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .shorter {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 60em) {
+  .spacing-high {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .shorter {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+@media (min-width: 75em) {
+  .spacing-high {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .shorter {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}

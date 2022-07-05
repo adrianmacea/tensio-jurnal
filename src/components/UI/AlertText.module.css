@@ -1,0 +1,16 @@
+.alert-text {
+  margin-top: 0.375rem;
+  margin-bottom: 0.875rem;
+  font-size: 1.0625rem;
+}
+
+@media (min-width: 43em) {
+  .alert-text {
+    font-size: 1.1875rem;
+  }
+}
+@media (min-width: 60em) {
+  .alert-text {
+    font-size: 1.25rem;
+  }
+}
