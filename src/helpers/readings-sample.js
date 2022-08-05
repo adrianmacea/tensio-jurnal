@@ -33,7 +33,6 @@ export const READING_SAMPLES = [
   },
   {
     "arm": "Stânga",
-    "comment": "Lorem ipsum dolor, comment ...",
     "dia": 84,
     "puls": 60,
     "sis": 132,
@@ -202,7 +201,7 @@ export const READING_SAMPLES = [
   },
   {
     "arm": "Dreapta",
-    "comment": "Tratament curent: \nD: 1 Aprovel (150) + 1 Tertensif\nS: 1/2 Aprovel (150) + 1 Norvasc (5)",
+    "comment": "Lorem ipsum dolor, comment ...",
     "dia": 91,
     "puls": 59,
     "sis": 133,
@@ -220,6 +219,7 @@ export const READING_SAMPLES = [
   },
   {
     "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
     "dia": 93,
     "puls": 76,
     "sis": 140,
@@ -314,5 +314,181 @@ export const READING_SAMPLES = [
     "sis": 135,
     "timestamp": 1657034680000,
     "weight": 95
+  },
+  {
+    "arm": "Stânga",
+    "dia": 89,
+    "puls": 61,
+    "sis": 136,
+    "timestamp": 1657091497000,
+    "weight": 95
+  },
+  {
+    "arm": "Stânga",
+    "dia": 89,
+    "puls": 60,
+    "sis": 126,
+    "timestamp": 1657119173000,
+    "weight": 94
+  },
+  {
+    "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 90,
+    "puls": 73,
+    "sis": 130,
+    "timestamp": 1657194194000,
+    "weight": 94
+  },
+  {
+    "arm": "Stânga",
+    "dia": 100,
+    "puls": 76,
+    "sis": 150,
+    "timestamp": 1657265660000,
+    "weight": 94
+  },
+  {
+    "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 95,
+    "puls": 72,
+    "sis": 130,
+    "timestamp": 1657265814000,
+    "weight": 94
+  },
+  {
+    "arm": "Stânga",
+    "dia": 80,
+    "puls": 68,
+    "sis": 111,
+    "timestamp": 1658512970000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 83,
+    "puls": 68,
+    "sis": 124,
+    "timestamp": 1658556858000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 92,
+    "puls": 79,
+    "sis": 151,
+    "timestamp": 1658297541000,
+    "weight": 90
+  },
+  {
+    "arm": "Stânga",
+    "dia": 79,
+    "puls": 64,
+    "sis": 116,
+    "timestamp": 1658632820000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 79,
+    "puls": 76,
+    "sis": 119,
+    "timestamp": 1658664404000,
+    "weight": 89
+  },
+  {
+    "arm": "Stânga",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 80,
+    "puls": 60,
+    "sis": 118,
+    "timestamp": 1658729493000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 89,
+    "puls": 73,
+    "sis": 133,
+    "timestamp": 1658847600000,
+    "weight": 89
+  },
+  {
+    "arm": "Stânga",
+    "dia": 86,
+    "puls": 78,
+    "sis": 123,
+    "timestamp": 1658904442000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 89,
+    "puls": 91,
+    "sis": 136,
+    "timestamp": 1658989649000,
+    "weight": 88
+  },
+  {
+    "arm": "Stânga",
+    "dia": 92,
+    "puls": 75,
+    "sis": 132,
+    "timestamp": 1659073266000,
+    "weight": 88
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 77,
+    "puls": 64,
+    "sis": 114,
+    "timestamp": 1659204077000,
+    "weight": 89
+  },
+  {
+    "arm": "Stânga",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 87,
+    "puls": 61,
+    "sis": 132,
+    "timestamp": 1659290943000,
+    "weight": 88
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 88,
+    "puls": 55,
+    "sis": 128,
+    "timestamp": 1659377011000,
+    "weight": 88
+  },
+  {
+    "arm": "Stânga",
+    "dia": 90,
+    "puls": 51,
+    "sis": 137,
+    "timestamp": 1659508242000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 91,
+    "puls": 67,
+    "sis": 134,
+    "timestamp": 1659597796000,
+    "weight": 89
+  },
+  {
+    "arm": "Dreapta",
+    "comment": "Lorem ipsum dolor, comment ...",
+    "dia": 93,
+    "puls": 68,
+    "sis": 133,
+    "timestamp": 1659678956000,
+    "weight": 89
   }
 ];
