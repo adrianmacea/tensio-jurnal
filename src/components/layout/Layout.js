@@ -16,18 +16,6 @@ const Layout = (props) => {
 
   return (
     <>
-      <div className={styles['background']}>
-        <div
-          className={`${styles['background--top']} ${
-            !isLoggedIn ? styles['landing-page--background--top'] : ''
-          }
-          `}
-        >
-          <div className={styles['background--top-center']}></div>
-        </div>
-        <div className={styles['background--center']}></div>
-      </div>
-
       {isLoggedIn && (
         <div className={styles['container']}>
           <div className={styles['container--nav']}>
@@ -40,8 +28,10 @@ const Layout = (props) => {
               className={styles['container--arrows-div']}
             >
               <ArrowsIco className={isNavOpen ? 'rotate180' : ''} />
-            </div>            
-            <div className={isWindowWidth ? '' : styles['scroll-to-bottom-fix']}>
+            </div>
+            <div
+              className={isWindowWidth ? '' : styles['scroll-to-bottom-fix']}
+            >
               {props.children}
             </div>
           </div>
@@ -49,9 +39,12 @@ const Layout = (props) => {
       )}
 
       {!isLoggedIn && (
-        <div className={styles['landing-page--container']}>
-          {props.children}
-        </div>
+        <>
+          <div className={styles['landing-page--top']}></div>
+          <div className={styles['landing-page--container']}>
+            {props.children}
+          </div>
+        </>
       )}
     </>
   );

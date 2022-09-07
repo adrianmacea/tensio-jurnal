@@ -45,10 +45,12 @@ const useQueryReadings = () => {
 
   readings.sort((a, b) => b.timestamp - a.timestamp);
   const mostRecentWeight = readings[0]?.weight;
+  const mostRecentArm = readings[0]?.arm;
 
   return {
     readings,
     mostRecentWeight,
+    mostRecentArm,
     isLoading,
     error,
     isError,

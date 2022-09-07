@@ -54,7 +54,7 @@ html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 body {
-  background-color: var(--c-grey-side-1);
+  background-color: var(--c-grey-side-2);
   min-height: 100%;
   overflow: hidden;
 }

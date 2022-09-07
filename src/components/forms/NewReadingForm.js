@@ -38,7 +38,6 @@ const dateValidation = (val) => {
 
 const NewReadingForm = () => {
   const [formIsValid, setFormIsValid] = useState(false);
-  const [armToggle, setArmToggle] = useState(true);
   const sistolicInputRef = useRef();
   const diastolicInputRef = useRef();
   const pulsInputRef = useRef();
@@ -50,7 +49,10 @@ const NewReadingForm = () => {
   const { showModal, setModalData } = useModalContext();
   const navigate = useNavigate();
   const { windowWidth } = usePanelsContext();
-  const { mostRecentWeight: userWeight, refetch } = useQueryReadings();
+  const { mostRecentWeight: userWeight, mostRecentArm: userArm, refetch } = useQueryReadings();
+  const initialArmState = userArm === 'Stânga' ? true : false;
+  const [armToggle, setArmToggle] = useState(!initialArmState);
+  
   
   const date = new Date();
   const today = format(date, US_DATE);
@@ -170,7 +172,7 @@ const NewReadingForm = () => {
           timestamp: timestamp,
           arm: armToggle ? 'Stânga' : 'Dreapta',
           comment:
-            commentInputRef.current.value === ''
+            commentInputRef.current.value.trim() === ''
               ? null
               : commentInputRef.current.value
         };

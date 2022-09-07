@@ -11,11 +11,9 @@ const LandingPage = () => {
 
   let logoSize = 28;
   let headline = 'Tu ești în control.';
-  let showSideLines = false;
   switch (true) {
     case windowWidth > 1287:
       logoSize = 44;
-      showSideLines = true;
       break;
     case windowWidth > 1199:
       logoSize = 43;
@@ -64,7 +62,6 @@ const LandingPage = () => {
       <div className={styles['lp--image-box']}>
         <img src={image} alt="Rafting" className={styles['lp--image']} />
         <p className={styles['lp--image-headline']}>{headline}</p>
-        {showSideLines && <div className={styles['lp--image-sidelines']}></div>}
       </div>
 
       <main className={styles['lp--main']}>
