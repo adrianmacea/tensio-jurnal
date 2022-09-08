@@ -4,6 +4,7 @@ const PanelsContext = React.createContext({
   isNavOpen: false,
   setIsNavOpen: () => {},
   windowWidth: 375,
+  windowHeight: 688,
   isColorsOpened: false,
   isColorsDetailed: false,
   toggleColorsOpened: () => {},

@@ -50,16 +50,19 @@
   outline: none;
 }
 html {
-  min-height: 100%;
   font-family: 'Source Sans Pro', sans-serif;
+  /* mobile vh fix */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 body {
   background-color: var(--c-grey-side-2);
-  min-height: 100%;
   overflow: hidden;
+  /* mobile vh fix */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 #root {
-  min-height: 100%;
+  /* mobile vh fix */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 ul {
   list-style: none;

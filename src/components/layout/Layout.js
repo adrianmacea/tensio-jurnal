@@ -7,8 +7,13 @@ import { usePanelsContext } from '../../store/panels-context';
 
 const Layout = (props) => {
   const { isLoggedIn } = useAuthContext();
-  const { isNavOpen, setIsNavOpen, windowWidth } = usePanelsContext();
+  const { isNavOpen, setIsNavOpen, windowWidth, windowHeight } =
+    usePanelsContext();
   const isWindowWidth = windowWidth > 1024;
+
+  /* mobile vh fix */
+  let vh = windowHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 
   const expandNavHandler = () => {
     setIsNavOpen((prevIsNavOpen) => !prevIsNavOpen);

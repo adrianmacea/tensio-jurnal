@@ -1,9 +1,10 @@
 .left-nav {
-  min-height: 100vh;
   background-color: var(--c-grey-4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* mobile vh fix */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 .left-nav--logo-box {
   display: flex;
@@ -95,12 +96,6 @@
   color: var(--c-light);
 }
 
-@media (max-width: 43em) {
-  /* mobile scroll to bottom fix */
-  .left-nav--secondary-container {
-    margin-bottom: 3.5rem;
-  }
-}
 @media (min-width: 43em) {
   .left-nav--logo-box {
     padding: 0.5rem 0.75rem;

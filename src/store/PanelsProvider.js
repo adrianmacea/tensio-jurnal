@@ -14,6 +14,19 @@ function debounce(fn, ms) {
 }
 
 const PanelsProvider = (props) => {
+  /* windowHeight context (for mobile vh fix) */
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      setWindowHeight(window.innerHeight);
+    }, 480);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   /* windowWidth context */
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -44,6 +57,7 @@ const PanelsProvider = (props) => {
   const panelsContext = {
     isNavOpen,
     setIsNavOpen,
+    windowHeight,
     windowWidth,
     isColorsOpened,
     isColorsDetailed,
