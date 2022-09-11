@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 
 const PanelsContext = React.createContext({
-  isNavOpen: false,
-  setIsNavOpen: () => {},
   windowWidth: 375,
   windowHeight: 688,
+  navWidth: 45,
+  mainVisibleWidth: 275,
+  isNavOpen: false,
   isColorsOpened: false,
   isColorsDetailed: false,
+  setIsNavOpen: () => {},
+  setNavWidth: () => {},
   toggleColorsOpened: () => {},
   toggleColorsDetailed: () => {}
 });

@@ -4,12 +4,26 @@ import styles from './Layout.module.css';
 import LeftNavigation from './LeftNavigation';
 import { useAuthContext } from '../../store/auth-context';
 import { usePanelsContext } from '../../store/panels-context';
+import { useCallback, useEffect, useRef } from 'react';
 
 const Layout = (props) => {
   const { isLoggedIn } = useAuthContext();
-  const { isNavOpen, setIsNavOpen, windowWidth, windowHeight } =
+  const { isNavOpen, setIsNavOpen, windowWidth, windowHeight, setNavWidth } =
     usePanelsContext();
   const isWindowWidth = windowWidth > 1024;
+  const navRef = useRef(null);
+
+  const measureNavWidth = useCallback(() => {
+    const nav = navRef.current;
+    if (nav)
+      setTimeout(() => {
+        setNavWidth(nav.getBoundingClientRect().width.toFixed(2));
+      }, 1);
+  }, [setNavWidth]);
+
+  useEffect(() => {
+    measureNavWidth();
+  }, [measureNavWidth]);
 
   /* mobile vh fix */
   let vh = windowHeight * 0.01;
@@ -17,17 +31,18 @@ const Layout = (props) => {
 
   const expandNavHandler = () => {
     setIsNavOpen((prevIsNavOpen) => !prevIsNavOpen);
+    measureNavWidth();
   };
 
   return (
     <>
       {isLoggedIn && (
         <div className={styles['container']}>
-          <div className={styles['container--nav']}>
+          <nav ref={navRef} id="nav" className={styles['container--nav']}>
             <LeftNavigation />
-          </div>
+          </nav>
 
-          <div className={styles['container--main']}>
+          <main className={styles['container--main']}>
             <div
               onClick={expandNavHandler}
               className={styles['container--arrows-div']}
@@ -39,7 +54,7 @@ const Layout = (props) => {
             >
               {props.children}
             </div>
-          </div>
+          </main>
         </div>
       )}
 

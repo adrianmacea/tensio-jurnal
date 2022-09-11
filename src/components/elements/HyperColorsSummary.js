@@ -13,8 +13,18 @@ import {
   S_INALT,
   S_NORMAL,
   S_OPTIM,
-  S_SIS_IZOLATA
+  S_SIS_IZOLATA,
+  SIS_VALUES,
+  DIA_VALUES,
+  L_OPTIM,
+  L_NORMAL
 } from '../../helpers/global-constants';
+
+const SIS = 'Sis.';
+const DIA = 'Dia.';
+const EMDASH = '—'; //&#8212;
+const SMALLER = '<'; //&#60;
+const GREATER = '>'; //&#62;
 
 const HyperColorsSummary = () => {
   const {
@@ -60,25 +70,28 @@ const HyperColorsSummary = () => {
             </p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. &#60; 90 &#8212; Dia. &#60; 60
+                {SIS} {SMALLER} {SIS_VALUES[0]} {EMDASH} {DIA} {SMALLER}{' '}
+                {DIA_VALUES[0]}
               </p>
             )}
             <div
               className={`${styles['color-sum--circle']} bg${S_OPTIM}`}
             ></div>
-            <p className={styles['colors-sum--name']}>Optimă</p>
+            <p className={styles['colors-sum--name']}>{L_OPTIM}</p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. 90-120 &#8212; Dia. 60-80
+                {SIS} {SIS_VALUES[0]}-{SIS_VALUES[1]} {EMDASH} {DIA}{' '}
+                {DIA_VALUES[0]}-{DIA_VALUES[1]}
               </p>
             )}
             <div
               className={`${styles['color-sum--circle']} bg${S_NORMAL}`}
             ></div>
-            <p className={styles['colors-sum--name']}>Normală</p>
+            <p className={styles['colors-sum--name']}>{L_NORMAL}</p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. 120-129 &#8212; Dia. 80-84
+                {SIS} {SIS_VALUES[1]}-{SIS_VALUES[2]} {EMDASH} {DIA}{' '}
+                {DIA_VALUES[1]}-{DIA_VALUES[2]}
               </p>
             )}
             <div
@@ -89,7 +102,8 @@ const HyperColorsSummary = () => {
             </p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. 130-139 &#8212; Dia. 85-89
+                {SIS} {SIS_VALUES[2]}-{SIS_VALUES[3]} {EMDASH} {DIA}{' '}
+                {DIA_VALUES[2]}-{DIA_VALUES[3]}
               </p>
             )}
             <div
@@ -100,7 +114,8 @@ const HyperColorsSummary = () => {
             </p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. 140-159 &#8212; Dia. 90-99
+                {SIS} {SIS_VALUES[3]}-{SIS_VALUES[4]} {EMDASH} {DIA}{' '}
+                {DIA_VALUES[3]}-{DIA_VALUES[4]}
               </p>
             )}
             <div
@@ -111,7 +126,8 @@ const HyperColorsSummary = () => {
             </p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. 160-179 &#8212; Dia. 100-109
+                {SIS} {SIS_VALUES[4]}-{SIS_VALUES[5]} {EMDASH} {DIA}{' '}
+                {DIA_VALUES[4]}-{DIA_VALUES[5]}
               </p>
             )}
             <div
@@ -122,7 +138,8 @@ const HyperColorsSummary = () => {
             </p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. &#62; 180 &#8212; Dia. &#62; 110
+                {SIS} {GREATER} {SIS_VALUES[5]} {EMDASH} {DIA} {GREATER}{' '}
+                {DIA_VALUES[5]}
               </p>
             )}
             <div
@@ -133,7 +150,8 @@ const HyperColorsSummary = () => {
             </p>
             {isDetailed && (
               <p className={styles['colors-sum--description']}>
-                Sis. &#62; 140 &#8212; Dia. &#60; 90
+                {SIS} {GREATER} {SIS_VALUES[3]} {EMDASH} {DIA} {SMALLER}{' '}
+                {DIA_VALUES[3]}
               </p>
             )}
           </div>

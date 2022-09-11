@@ -6,7 +6,7 @@ import { MdList as IstoricIco } from 'react-icons/md';
 import { MdDateRange as CalendarIco } from 'react-icons/md';
 import { MdOutlineSummarize as RaportIco } from 'react-icons/md';
 import { MdOutlineMedicalServices as MedicatieIco } from 'react-icons/md';
-import { MdFavoriteBorder as HipertensiuneIco } from 'react-icons/md';
+import { MdInfoOutline as HipertensiuneIco } from 'react-icons/md';
 import { MdImportExport as ImpExpIco } from 'react-icons/md';
 import { MdOutlineHelpOutline as HelpIco } from 'react-icons/md';
 import { MdOutlineEmail as ContactIco } from 'react-icons/md';
@@ -63,10 +63,7 @@ const LeftNavigation = () => {
     <div className={styles['left-nav']}>
       <div>
         <NavLink to={R_HOME} className={styles['left-nav--logo-box']}>
-          <Logo
-            className={styles['left-nav--logo-icon']}
-            logoSize={logoSize}
-          />
+          <Logo className={styles['left-nav--logo-icon']} logoSize={logoSize} />
           {isNavOpen && (
             <h1 className={styles['left-nav--logo-text']}>
               Tensio<span>Jurnal</span>
@@ -104,15 +101,6 @@ const LeftNavigation = () => {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? styles.active : '')}
-              to={R_CALENDAR}
-            >
-              <CalendarIco className={styles['left-nav--ico']} />
-              {isNavOpen && <p>Calendar</p>}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => (isActive ? styles.active : '')}
               to={R_STATISTICS}
             >
               <StatisticiIco className={styles['left-nav--ico']} />
@@ -122,10 +110,10 @@ const LeftNavigation = () => {
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? styles.active : '')}
-              to={R_REPORT}
+              to={R_CALENDAR}
             >
-              <RaportIco className={styles['left-nav--ico']} />
-              {isNavOpen && <p>Raport</p>}
+              <CalendarIco className={styles['left-nav--ico']} />
+              {isNavOpen && <p>Calendar</p>}
             </NavLink>
           </li>
           <li>
@@ -150,6 +138,15 @@ const LeftNavigation = () => {
       </div>
       <div className={styles['left-nav--secondary-container']}>
         <ul className={styles['left-nav--secondary']}>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.active : '')}
+              to={R_REPORT}
+            >
+              <RaportIco className={styles['left-nav--ico']} />
+              {isNavOpen && <p>Raport</p>}
+            </NavLink>
+          </li>
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? styles.active : '')}

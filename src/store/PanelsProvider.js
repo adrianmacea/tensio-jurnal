@@ -16,22 +16,12 @@ function debounce(fn, ms) {
 const PanelsProvider = (props) => {
   /* windowHeight context (for mobile vh fix) */
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    const handleResize = debounce(() => {
-      setWindowHeight(window.innerHeight);
-    }, 480);
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  
   /* windowWidth context */
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
+  useEffect(() => {    
     const handleResize = debounce(() => {
+      setWindowHeight(window.innerHeight);
       setWindowWidth(window.innerWidth);
     }, 480);
     window.addEventListener('resize', handleResize);
@@ -42,6 +32,8 @@ const PanelsProvider = (props) => {
 
   /* LeftNav context */
   const [isNavOpen, setIsNavOpen] = useState(windowWidth > 688);
+  const [navWidth, setNavWidth] = useState(0);
+  const mainVisibleWidth = windowWidth - navWidth;
 
   /* HyperColorsSummary context */
   const [isColorsOpened, setIsColorsOpened] = useState(false);
@@ -55,12 +47,15 @@ const PanelsProvider = (props) => {
   };
 
   const panelsContext = {
-    isNavOpen,
-    setIsNavOpen,
-    windowHeight,
     windowWidth,
+    windowHeight,
+    navWidth,
+    mainVisibleWidth,
+    isNavOpen,
     isColorsOpened,
     isColorsDetailed,
+    setIsNavOpen,
+    setNavWidth,
     toggleColorsOpened,
     toggleColorsDetailed
   };
