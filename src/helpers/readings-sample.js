@@ -438,5 +438,29 @@ export const READING_SAMPLES = [
     "sis": 128,
     "timestamp": 1653433839000,
     "weight": 95
-  }
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 87,
+    "puls": 72,
+    "sis": 149,
+    "timestamp": 1662728075000,
+    "weight": 85
+  },
+  {
+    "arm": "Dreapta",
+    "dia": 101,
+    "puls": 61,
+    "sis": 138,
+    "timestamp": 1662956238000,
+    "weight": 85
+  },
+  {
+    "arm": "Stânga",
+    "dia": 98,
+    "puls": 62,
+    "sis": 138,
+    "timestamp": 1663129292000,
+    "weight": 86
+  },
 ];

@@ -49,20 +49,18 @@
 *:hover {
   outline: none;
 }
-html {
-  font-family: 'Source Sans Pro', sans-serif;
+html,
+body,
+#root {
   /* mobile vh fix */
   min-height: calc(var(--vh, 1vh) * 100);
+}
+html {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 body {
   background-color: var(--c-grey-side-2);
   overflow: hidden;
-  /* mobile vh fix */
-  min-height: calc(var(--vh, 1vh) * 100);
-}
-#root {
-  /* mobile vh fix */
-  min-height: calc(var(--vh, 1vh) * 100);
 }
 ul {
   list-style: none;
