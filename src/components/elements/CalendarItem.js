@@ -23,12 +23,16 @@ const MONTH_NAMES = [
 ];
 
 const CalendarItem = ({ month }) => {
-  const startDate = new Date(month);
+  const monthNo = month.slice(6);
+  const yearNo = month.slice(0, 4);
+  const startDate = new Date(yearNo, monthNo);
+
   const { generateMonth } = useCalendar(startDate);
   const monthGenerator = generateMonth()();
+  
   const { calendarReadings } = useCalendarReadings();
 
-  const monthTitle = `${MONTH_NAMES[month.slice(6) - 1]} ${month.slice(0, 4)}`;
+  const monthTitle = `${MONTH_NAMES[monthNo - 1]} ${yearNo}`;
 
   const coloredDays = calendarReadings[month];
 
@@ -38,6 +42,7 @@ const CalendarItem = ({ month }) => {
         <p className={styles['cal-item--title-name']}>{monthTitle}</p>
         <div className={styles['cal-item--title-line']}></div>
       </div>
+
       <div className={styles['cal-item--grid']}>
         {DAYS_SHORT.map((day, i) => (
           <div key={i} className={styles['cal-item--day-name']}>
