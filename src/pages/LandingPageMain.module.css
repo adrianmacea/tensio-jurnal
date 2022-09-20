@@ -5,6 +5,10 @@
   gap: 1.125rem;
 }
 
+.lp-main--margin-top {
+  margin-top: 0.75rem;
+}
+
 @media (min-width: 33em) {
   .container-flex-column {
     gap: 1.25rem;
