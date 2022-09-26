@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import axios from 'axios';
 
 import useFirebaseUrl from '../use-firebase-url';
+import useTimeRange from '../use-time-range';
 
 const useQueryReadings = () => {
   const { readingsUrl } = useFirebaseUrl();
@@ -45,12 +46,20 @@ const useQueryReadings = () => {
 
   readings.sort((a, b) => b.timestamp - a.timestamp);
   const mostRecentWeight = readings[0]?.weight;
-  const mostRecentArm = readings[0]?.arm;
+  const { hourStart, hourEnd } = useTimeRange();
+
+  const latestEntryInThisTimeRange = readings?.find(
+    (element) =>
+      +element.time.slice(0, 2) >= hourStart &&
+      +element.time.slice(0, 2) < hourEnd
+  );
+  const mostRecentArmInThisTimeRange = latestEntryInThisTimeRange?.arm;
+  // const mostRecentArm = readings[0]?.arm;
 
   return {
     readings,
     mostRecentWeight,
-    mostRecentArm,
+    mostRecentArm: mostRecentArmInThisTimeRange,
     isLoading,
     error,
     isError,
